@@ -1,4 +1,4 @@
-{#insert layout}
+{#include layout}
 
 
   {#title}Probes{/title}
@@ -12,6 +12,13 @@
 
   <h1>Probes</h1>
 
+  <ul>
+    {#for probe in probeList}
+      <li>
+        <a href="/probes/{probe.getId()}">{probe.getUrl()}</a>
+      </li>
+    {/for}
+  </ul>
 
 
-{/insert}
+{/include}
